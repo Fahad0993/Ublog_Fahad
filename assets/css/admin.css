@@ -1,0 +1,84 @@
+header {
+    background: rgb(0, 49, 50);
+}
+
+.admin-wrapper{
+    display: flex; /*so that child element will be placed horizontally, row format*/
+    height: calc(100% - 66px);
+}
+
+.admin-wrapper .left-sidebar{
+    flex: 2; /*20% of the admin wrapper space will be occupied by this child element*/
+    height: 100%;
+    background: #234a57;
+}
+
+.admin-wrapper .left-sidebar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+}
+
+.admin-wrapper .left-sidebar ul li a{
+    padding: 18px;
+    display: block; /*so the item can expand with the entire width*/
+    border-bottom: 1px solid #004044;
+}
+
+.admin-wrapper .left-sidebar ul li a:hover{
+    background: #004044;
+}
+
+.admin-wrapper .admin-content{
+    flex: 8;/*80% of the admin wrapper space will be occupied by this*/
+    height: 100%;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
+
+.admin-content .page-title{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+th, td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.edit{
+    color: green;
+}
+
+.delete{
+    color: red;
+}
+
+.publish{
+    color: blue;
+}
+
+.edit:hover, .delete:hover, .publish:hover, .unpublish:hover{
+    text-decoration: underline;
+}
+
+form div{
+    margin-bottom: 15px;
+}
+@media only screen and (max-width: 600px){
+    .admin-content .button-group{
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        gap: 10px; 
+        justify-content: space-between; /* This will evenly distribute the space between the elements */
+    }
+}
